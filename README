@@ -1,0 +1,11 @@
+What is it?
+-----------
+
+This is a plugin developed for Joomla! 1.7 (...it might work with 1.6 too, but I didn't verify it). This plugin provides an easy integration of the Heise Social Share Privacy PlugIn, which changed social 'like' buttons from Facebook, Twitter or Google+ to a 'two-click format'.
+
+We all know, that a website transfers data to such social networks if a user visits a web page with embedded 'like'-buttons. These - often unintentional! - data transfers can be used by Facebook & Co. for tracking purposes.
+
+The Heise Social Share Privacy PlugIn (http://heise.de/-1333879) will effectively disable unintentional automatic tracking of all page visits by third-party social sites like Facebook, Twitter or Google+. The PlugIn places a greyed-out 'dummy like' button in the page, without transfering data to any social network. If a user wants to share or 'like', he has to execute an additional click - and thus declares his consent to communicate with Facebook, Twitter and Google - to enable the original 'like' or '+' button and to get the desired behavior.
+
+Heises PlugIn source code is not part of this project, you have to download it from the project website (German): http://www.heise.de/extras/socialshareprivacy/ .
+
