@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.7" type="plugin" group="content">
+	<name>PLG_CONTENT_SOCIAL_SHARE_PRIVACY_NAME</name>
+	<author>Stephan Roth</author>
+	<creationDate>October 2011</creationDate>
+	<copyright>Copyright (C) 2011 Stephan Roth. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>stephan.roth@roth-soft.de</authorEmail>
+	<authorUrl>http://www.roth-soft.de</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_CONTENT_SOCIAL_SHARE_PRIVACY_DESCRIPTION</description>
+	<files>
+		<filename plugin="SocialSharePrivacy">SocialSharePrivacy.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+		<folder>plugin</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_content_SocialSharePrivacy.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_content_SocialSharePrivacy.sys.ini</language>
+		<language tag="de-DE">de-DE/de-DE.plg_content_SocialSharePrivacy.ini</language>
+		<language tag="de-DE">de-DE/de-DE.plg_content_SocialSharePrivacy.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+		  <fieldset name="basic">
+        <field name="lang" type="list" default="de-DE" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_LANGUAGE" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_LANGUAGE_DESC">
+					<option value="en-GB">Englisch (UK)</option>
+					<option value="de-DE">Deutsch</option>
+        </field>
+				<field name="position" type="radio" default="1" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_POSITION" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_POSITION_DESC" >
+					<option value="1">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_POSITION_BEFORE</option>
+					<option value="2">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_POSITION_AFTER</option>
+				</field>
+				<field name="spacer01" type="spacer" class="text" label="############# Facebook #############" />
+				<field name="displayFacebook" type="radio" default="1" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_FACEBOOK" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_FACEBOOK_DESC" >
+          <option value="0">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_NO</option>
+          <option value="1">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_YES</option>
+        </field>
+				<field name="spacer02" type="spacer" class="text" label="############# Twitter #############" />
+        <field name="displayTwitter" type="radio" default="1" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_TWITTER" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_TWITTER_DESC" >
+          <option value="0">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_NO</option>
+          <option value="1">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_YES</option>
+        </field>
+				<field name="spacer03" type="spacer" class="text" label="############# Google+ #############" />
+        <field name="displayGooglePlus" type="radio" default="1" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_GOOGLEPLUS" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_GOOGLEPLUS_DESC" >
+          <option value="0">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_NO</option>
+          <option value="1">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_YES</option>
+        </field>
+      </fieldset>
+			<fieldset name="advanced">
+        <field name="jqueryurl" type="text" size="60" default="" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_JQUERYURL" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_JQUERYURL_DESC" />
+				<field name="compressed" type="list" default="1" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_SCRIPTCOMPRESSION" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_SCRIPTCOMPRESSION_DESC" >
+					<option value="0">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_NO</option>
+					<option value="1">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_YES</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
