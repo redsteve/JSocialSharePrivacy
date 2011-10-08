@@ -5,7 +5,28 @@ This is a plugin developed for Joomla! 1.7 (...it might work with 1.6 too, but I
 
 We all know, that a website transfers data to such social networks if a user visits a web page with embedded 'like'-buttons. These - often unintentional! - data transfers can be used by Facebook & Co. for tracking purposes.
 
-The Heise Social Share Privacy PlugIn (http://heise.de/-1333879) will effectively disable unintentional automatic tracking of all page visits by third-party social sites like Facebook, Twitter or Google+. The PlugIn places a greyed-out 'dummy like' button in the page, without transfering data to any social network. If a user wants to share or 'like', he has to execute an additional click - and thus declares his consent to communicate with Facebook, Twitter and Google - to enable the original 'like' or '+' button and to get the desired behavior.
+The Heise Social Share Privacy PlugIn (http://heise.de/-1333879) will effectively disable unintentional automatic tracking of all page visits by third-party social sites like Facebook, Twitter or Google+. The PlugIn places a greyed-out 'dummy like' button in the page, without transfering data to any social network. If a user wants to share or 'like', he has to execute an additional click - and thus declares his consent to communicate with Facebook, Twitter or Google - to enable the original 'like' or '+' button and to get the desired behavior.
 
-Heises PlugIn source code is not part of this project, you have to download it from the project website (German): http://www.heise.de/extras/socialshareprivacy/ .
+Howto install JSocialSharePrivacy
+---------------------------------
+
+1. Download the JSocialSharePrivacy PlugIn.
+2. Download the Heise Social Share Privacy PlugIn (see notes below)
+3. Unpack the Heise PlugIn into the JSocialSharePrivacy\SocialSharePrivacy folder. The directories must build the following structure:
+
+JSocialSharePrivacy
+|-- SocialSharePrivacy   (<- this is the root of the Joomla! PlugIn!)
+    |-- languages
+    |-- socialshareprivacy   (<- this is the Heise PlugIn!)
+        |-- socialshareprivacy
+
+4. Pack the whole folder "SocialSharePrivacy" (NOT JSocialSharePrivacy!) with its subfolders and files into a zip-archive.
+5. Open the Extension Area in the administrator backend of your Joomla!-Installation and upload/install the PlugIn.
+
+Please note the following things
+--------------------------------
+
+Heises PlugIn source code is not part of this project, you have to download it from the project website (German): http://www.heise.de/extras/socialshareprivacy/. Heises PlugIn is released under the MIT License (http://www.opensource.org/licenses/mit-license.php).
+
+Furthermore jQuery (http://jquery.com) is required to run the Heise PlugIn. Sometimes jQuery is anyway included in the HTML headers, e.g. by another Joomla! plugin. If not, you must download and install jQuery by yourself and have to enter the path in the PlugIn configuration field "jQuery URL". jQuery is released under the MIT License (http://www.opensource.org/licenses/mit-license.php).
 
