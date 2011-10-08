@@ -1,9 +1,9 @@
 <?php
 /**
  * Social Share Privacy PlugIn for Joomla! 1.7 or higher
- * @link      https://github.com/redsteve/SocialSharePrivacy
+ * @link      https://github.com/redsteve/JSocialSharePrivacy
  * @copyright Copyright (C) 2011 Stephan Roth. All rights reserved.
- * @license   GNU General Public License version 2 or later; see LICENSE.txt
+ * @license   MIT License; see MIT-LICENSE file
  */
 
 defined('_JEXEC') or die('Restricted access!');
