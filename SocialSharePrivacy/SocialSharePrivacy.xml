@@ -44,7 +44,7 @@
 					<option value="1">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_YES</option>
 				</field>
 				<field name="facebookReferrerTrack" type="text" size="60" default="" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_SERVICE_REFERRER_TRACK" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_SERVICE_REFERRER_TRACK_DESC" />
-				<field name="spacer02" type="spacer" class="text" label="############# Twitter  #############" />
+				<field name="spacer02" type="spacer" class="text" label="#############  Twitter  #############" />
 				<field name="displayTwitter" type="radio" default="1" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_TWITTER" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_TWITTER_DESC" >
 					<option value="0">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_NO</option>
 					<option value="1">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_YES</option>
@@ -55,13 +55,13 @@
 					<option value="1">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_YES</option>
 				</field>
 				<field name="twitterReferrerTrack" type="text" size="60" default="" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_SERVICE_REFERRER_TRACK" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_SERVICE_REFERRER_TRACK_DESC" />
-				<field name="spacer03" type="spacer" class="text" label="############# Google+  #############" />
+				<field name="spacer03" type="spacer" class="text" label="#############  Google+  #############" />
 				<field name="displayGooglePlus" type="radio" default="1" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_GOOGLEPLUS" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_GOOGLEPLUS_DESC" >
 					<option value="0">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_NO</option>
 					<option value="1">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_YES</option>
 				</field>
 				<field name="googleDummyImage" type="text" size="60" default="" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_SERVICE_DUMMY_IMAGE" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_SERVICE_DUMMY_IMAGE_DESC" />
-				<field name="googlePermaOption" type="radio" default="1" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_SERVICE_PERMAOPTION" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_GOOGLE_PERMAOPTION_DESC" >
+				<field name="googlePermaOption" type="radio" default="1" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_SERVICE_PERMAOPTION" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_PERMAOPTION_DESC" >
 					<option value="0">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_NO</option>
 					<option value="1">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_YES</option>
 				</field>
