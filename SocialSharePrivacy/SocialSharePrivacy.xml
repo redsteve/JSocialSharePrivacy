@@ -7,7 +7,7 @@
 	<license>MIT License; see MIT-LICENSE file</license>
 	<authorEmail>stephan.roth@roth-soft.de</authorEmail>
 	<authorUrl>http://www.roth-soft.de</authorUrl>
-	<version>1.0.0</version>
+	<version>0.9.0 Beta</version>
 	<description>PLG_CONTENT_SOCIAL_SHARE_PRIVACY_DESCRIPTION</description>
 	<files>
 		<filename plugin="SocialSharePrivacy">SocialSharePrivacy.php</filename>
@@ -23,37 +23,57 @@
 	</languages>
 	<config>
 		<fields name="params">
-		  <fieldset name="basic">
-        <field name="lang" type="list" default="de-DE" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_LANGUAGE" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_LANGUAGE_DESC">
+			<fieldset name="basic">
+				<field name="lang" type="list" default="de-DE" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_LANGUAGE" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_LANGUAGE_DESC">
 					<option value="en-GB">Englisch (UK)</option>
 					<option value="de-DE">Deutsch</option>
-        </field>
+				</field>
 				<field name="position" type="radio" default="1" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_POSITION" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_POSITION_DESC" >
 					<option value="1">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_POSITION_BEFORE</option>
 					<option value="2">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_POSITION_AFTER</option>
 				</field>
+				<field name="cookieDomain" type="text" size="60" default="" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_COOKIE_DOMAIN" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_COOKIE_DOMAIN_DESC" />
 				<field name="spacer01" type="spacer" class="text" label="############# Facebook #############" />
 				<field name="displayFacebook" type="radio" default="1" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_FACEBOOK" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_FACEBOOK_DESC" >
-          <option value="0">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_NO</option>
-          <option value="1">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_YES</option>
-        </field>
-				<field name="spacer02" type="spacer" class="text" label="############# Twitter #############" />
-        <field name="displayTwitter" type="radio" default="1" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_TWITTER" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_TWITTER_DESC" >
-          <option value="0">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_NO</option>
-          <option value="1">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_YES</option>
-        </field>
-				<field name="spacer03" type="spacer" class="text" label="############# Google+ #############" />
-        <field name="displayGooglePlus" type="radio" default="1" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_GOOGLEPLUS" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_GOOGLEPLUS_DESC" >
-          <option value="0">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_NO</option>
-          <option value="1">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_YES</option>
-        </field>
-      </fieldset>
+					<option value="0">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_NO</option>
+					<option value="1">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_YES</option>
+				</field>
+				<field name="facebookDummyImage" type="text" size="60" default="" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_SERVICE_DUMMY_IMAGE" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_SERVICE_DUMMY_IMAGE_DESC" />
+				<field name="facebookPermaOption" type="radio" default="1" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_SERVICE_PERMAOPTION" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_FACEBOOK_PERMAOPTION_DESC" >
+					<option value="0">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_NO</option>
+					<option value="1">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_YES</option>
+				</field>
+				<field name="facebookReferrerTrack" type="text" size="60" default="" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_SERVICE_REFERRER_TRACK" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_SERVICE_REFERRER_TRACK_DESC" />
+				<field name="spacer02" type="spacer" class="text" label="############# Twitter  #############" />
+				<field name="displayTwitter" type="radio" default="1" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_TWITTER" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_TWITTER_DESC" >
+					<option value="0">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_NO</option>
+					<option value="1">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_YES</option>
+				</field>
+				<field name="twitterDummyImage" type="text" size="60" default="" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_SERVICE_DUMMY_IMAGE" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_SERVICE_DUMMY_IMAGE_DESC" />
+				<field name="twitterPermaOption" type="radio" default="1" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_SERVICE_PERMAOPTION" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_TWITTER_PERMAOPTION_DESC" >
+					<option value="0">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_NO</option>
+					<option value="1">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_YES</option>
+				</field>
+				<field name="twitterReferrerTrack" type="text" size="60" default="" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_SERVICE_REFERRER_TRACK" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_SERVICE_REFERRER_TRACK_DESC" />
+				<field name="spacer03" type="spacer" class="text" label="############# Google+  #############" />
+				<field name="displayGooglePlus" type="radio" default="1" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_GOOGLEPLUS" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_GOOGLEPLUS_DESC" >
+					<option value="0">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_NO</option>
+					<option value="1">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_YES</option>
+				</field>
+				<field name="googleDummyImage" type="text" size="60" default="" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_SERVICE_DUMMY_IMAGE" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_SERVICE_DUMMY_IMAGE_DESC" />
+				<field name="googlePermaOption" type="radio" default="1" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_SERVICE_PERMAOPTION" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_GOOGLE_PERMAOPTION_DESC" >
+					<option value="0">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_NO</option>
+					<option value="1">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_YES</option>
+				</field>
+				<field name="googleReferrerTrack" type="text" size="60" default="" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_SERVICE_REFERRER_TRACK" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_SERVICE_REFERRER_TRACK_DESC" />
+			</fieldset>
 			<fieldset name="advanced">
-        <field name="jqueryurl" type="text" size="60" default="" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_JQUERYURL" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_JQUERYURL_DESC" />
+				<field name="jqueryurl" type="text" size="60" default="" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_JQUERYURL" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_JQUERYURL_DESC" />
 				<field name="compressed" type="list" default="1" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_SCRIPTCOMPRESSION" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_SCRIPTCOMPRESSION_DESC" >
 					<option value="0">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_NO</option>
 					<option value="1">PLG_CONTENT_SOCIAL_SHARE_PRIVACY_YES</option>
 				</field>
+				<field name="cssPath" type="text" size="60" default="" label="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_CSS_PATH" description="PLG_CONTENT_SOCIAL_SHARE_PRIVACY_CSS_PATH_DESC" />
 			</fieldset>
 		</fields>
 	</config>

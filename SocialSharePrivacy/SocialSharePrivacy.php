@@ -16,7 +16,7 @@ define('SOCIAL_SHARE_PRIVACY_BASE_URL', JURI::base() . SOCIAL_SHARE_PRIVACY_RELA
 final class plgContentSocialSharePrivacy extends JPlugin {
 
 	const divElementToSubstitute = "\n<div id=\"socialshareprivacy\"></div>\n";
-	const heisePluginFolder = "socialshareprivacy";
+	const heisePluginFolderName = "socialshareprivacy";
 	const defaultCssPathAndFilename = "socialshareprivacy\socialshareprivacy.css";
 	const socialSharePrivacyJScript = "jquery.socialshareprivacy.js";
 	const socialSharePrivacyMinimizedJScript = "jquery.socialshareprivacy.min.js";
@@ -75,6 +75,21 @@ final class plgContentSocialSharePrivacy extends JPlugin {
 		return (! (empty($jQueryUrl)));
 	}
 
+	private function isParameterFacebookReferrerTrackNotEmpty()	{
+		$facebookReferrerTrack = $this->params->get('facebookReferrerTrack');
+		return (! (empty($facebookReferrerTrack)));
+	}
+	
+	private function isParameterTwitterReferrerTrackNotEmpty()	{
+		$twitterReferrerTrack = $this->params->get('twitterReferrerTrack');
+		return (! (empty($twitterReferrerTrack)));
+	}
+	
+	private function isParameterGoogleReferrerTrackNotEmpty()	{
+		$googleReferrerTrack = $this->params->get('googleReferrerTrack');
+		return (! (empty($googleReferrerTrack)));
+	}
+	
     private function addCustomTagsToHeader(&$document) {
 		if ($this->isParameterJQueryUrlNotEmpty()) {
 			$this->addJQueryUrlToHeader($document);
@@ -89,7 +104,7 @@ final class plgContentSocialSharePrivacy extends JPlugin {
 	}
 
 	private function addHeiseSocialSharePrivacyJScriptToHeader(&$document) {
-		$heisePluginUrl = SOCIAL_SHARE_PRIVACY_BASE_URL . 'plugin/';
+		$heisePluginUrl = $this->getHeisePluginUrl();
 		$useCompressedScript = $this->params->get('compressed');
 		
 		if ($useCompressedScript == 1) {
@@ -105,6 +120,14 @@ final class plgContentSocialSharePrivacy extends JPlugin {
 		/** $document->addScriptDeclaration($javascript); */
 	}
 
+	private function getHeisePluginUrl() {
+		$heisePluginUrl = SOCIAL_SHARE_PRIVACY_BASE_URL;
+		$heisePluginUrl .= self::heisePluginFolderName;
+		$heisePluginUrl .= "/";
+		
+		return $heisePluginUrl;
+	}
+	
 	private function getHeisePluginConfig() {
 		$config = "\n    services : {";
 		
@@ -128,6 +151,11 @@ final class plgContentSocialSharePrivacy extends JPlugin {
 		if ($displayFacebook) {
 			$facebookPermaOption = $this->params->get('facebookPermaOption');
 			$this->appendEnablePermaOptionFragment($config, $facebookPermaOption);
+			
+			if ($this->isParameterFacebookReferrerTrackNotEmpty()) {
+				$facebookReferrerTrack = $this->params->get('facebookReferrerTrack');
+				$this->appendReferrerTrackOptionFragment($config, $facebookReferrerTrack);
+			}
 		}
 		
 		$this->closeSocialServiceConfigSection($config);
@@ -142,6 +170,11 @@ final class plgContentSocialSharePrivacy extends JPlugin {
 		if ($displayTwitter) {
 			$twitterPermaOption = $this->params->get('twitterPermaOption');
 			$this->appendEnablePermaOptionFragment($config, $twitterPermaOption);
+			
+			if ($this->isParameterTwitterReferrerTrackNotEmpty()) {
+				$twitterReferrerTrack = $this->params->get('twitterReferrerTrack');
+				$this->appendReferrerTrackOptionFragment($config, $twitterReferrerTrack);
+			}
 		}
 		
 		$this->closeSocialServiceConfigSection($config);
@@ -156,6 +189,10 @@ final class plgContentSocialSharePrivacy extends JPlugin {
 		if ($displayGooglePlus) {
 			$googlePermaOption = $this->params->get('googlePermaOption');
 			$this->appendEnablePermaOptionFragment($config, $googlePermaOption);
+			
+			if ($this->isParameterGoogleReferrerTrackNotEmpty()) {
+				$googleReferrerTrack = $this->params->get('googleReferrerTrack');
+				$this->appendReferrerTrackOptionFragment($config, $googleReferrerTrack);
 		}
 		
 		$this->closeSocialServiceConfigSection($config);
@@ -179,6 +216,12 @@ final class plgContentSocialSharePrivacy extends JPlugin {
 	private function appendEnablePermaOptionFragment(&$config, $enableFlag) {
 		$config = "\n        'perma_option' : ";
 		$this->appendBooleanFlag(&$config, $enableFlag);
+	}
+
+	private function appendReferrerTrackOptionFragment(&$config, $referrerTrack) {
+		$config  = "\n        'referrer_track' : '";
+		$config .= $referrerTrack;
+		$config .= "',";
 	}
 
 	private function appendBooleanFlag(&$config, $enableFlag) {
